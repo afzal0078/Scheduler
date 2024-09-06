@@ -1,0 +1,1 @@
+CREATE TABLE `students_data`.`students` (`enrollment_no` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(45) NOT NULL , `email` VARCHAR(45) NOT NULL , `branch` VARCHAR(45) NOT NULL , `year` VARCHAR(5) NOT NULL , `phone` VARCHAR(15) NOT NULL , `status` VARCHAR(10) NOT NULL DEFAULT 'active' , PRIMARY KEY (`enrollment_no`)) ENGINE = InnoDB;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/style.css">
+    <title>Registration</title>
+</head>
+
+<body>
+    {{>navbar}}
+    <section class="home">
+
+        <div class="boody">
+
+            <div class="wrapper-register">
+
+                <div class="form-box register">
+                    <h2>Register Now</h2>
+                    <form action="/auth/register" method="POST">
+                        <div class="input-box">
+                            <span class="bx bx-user icon"></span>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                            <label for="Name" class="form-label">Full Name</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="bx bx-envelope icon"></span>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="bx bx-lock-alt icon"></span>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                            <label for="password" class="form-label">Password</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="bx bx-lock-alt icon"></span>
+                            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm"
+                                required>
+                            <label for="passwordConfirm" class="form-label">Confirm Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register User</button>
+                        {{!-- <button type="submit" class="btn">Log In</button> --}}
+                        <div class="login-register">
+                            <p>Already have a account? <a href="/login" class="register-link">Login</a></p>
+                        </div>
+                    </form>
+                    <div class="message">
+                        <div class="danger" id="danger">
+                            {{#if message}}
+                            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
